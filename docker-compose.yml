@@ -1,0 +1,11 @@
+version: '3.1'
+services: 
+  app:
+    build: .
+    volumes: 
+      - .:/var/www/html
+    ports: 
+      - 88:80
+    environment:
+      XDEBUG_KEY: test
+      XDEBUG_HOST: 10.0.75.1
